@@ -12,7 +12,11 @@ import UIKit
 public extension UISearchBar {
     var textField: UITextField? {
         get {
-            return self.value(forKey: "_searchField") as? UITextField
+            if #available(iOS 13.0, *) {
+                return self.searchTextField
+            } else {
+                return self.value(forKey: "_searchField") as? UITextField
+            }
         }
     }
 }
