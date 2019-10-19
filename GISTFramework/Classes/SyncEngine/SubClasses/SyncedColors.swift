@@ -40,7 +40,7 @@ open class SyncedColors: SyncEngine {
         if let haxColor:String = super.objectForKey(key) {
             return UIColor(haxColor);
         } else {
-            return .black;
+            return .white;
         }
         
     } //F.E.
